@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>나의 시간표</title>
+
+    <!-- 구글 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* 전체 페이지 */
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 20px;
+        }
+
+
+        /* 제목 */
+        .T1 {
+            font-family: "Bagel Fat One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;
+            margin: 20px;
+        }
+
+
+    
+        #s1 {
+            border: 2px solid black;
+            background-color: aliceblue;
+            margin: 20px;
+            position: relative;
+        }
+
+
+        /* 제목 위치 */
+        #title {
+            position: relative;
+            left: 10px;
+        }
+
+
+        /* th */
+        th {
+            border: 1px solid gray;
+            background-color: lightgray;
+            height: 40px;
+        }
+
+
+        /* td */
+        td {
+            border: 1px solid gray;
+            width: 130px;
+            height: 50px;
+            text-align: center;
+        }
+
+
+        /* 시간 부분 */
+        tbody th {
+            width: 60px;
+        }
+
+
+        /* 과목 */
+        .subject {
+            font-weight: 500;
+        }
+
+
+        /* 과목별 색상 */
+        #web {
+            background-color: lightblue;
+        }
+
+        #python {
+            background-color: lightyellow;
+        }
+
+        #machine {
+            background-color: greenyellow;
+        }
+
+        #ai {
+            background-color: lavender;
+        }
+
+        #rl {
+            background-color: lightpink;
+        }
+
+        #nlp {
+            background-color: lightsalmon;
+        }
+
+
+        /* 아이콘 크기 */
+        .calendar-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+
+        
+        .empty-cell {
+            background-color: aliceblue;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- 제목 -->
+    <h1 id="title" class="T1">나의 시간표</h1>
+
+
+    <table id="s1" border="1">
+
+        <thead>
+
+            <tr>
+                <th>시간</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <!-- 9시 -->
+            <tr>
+
+                <th>9시</th>
+
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/6003/6003629.png"
+                         alt="날짜 저장 아이콘">
+                </td>
+
+                <td id="web" class="subject" rowspan="3">
+                    웹프로그래밍<br>
+                    바울관303호<br>
+                    (AI프로젝트 LAB실)
+                </td>
+
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/6003/6003629.png"
+                         alt="날짜 저장 아이콘">
+                </td>
+
+                <td id="python" class="subject" rowspan="3">
+                    컴퓨팅 사고: Python 프로그래밍<br>
+                    제1실습관207호<br>
+                    (컴퓨터실습실)
+                </td>
+
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/6003/6003629.png"
+                         alt="날짜 저장 아이콘">
+                </td>
+
+            </tr>
+
+
+            <!-- 10시 -->
+            <tr>
+
+                <th>10시</th>
+
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+
+            <!-- 11시 -->
+            <tr>
+
+                <th>11시</th>
+
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+
+            <!-- 12시 -->
+            <tr>
+
+                <th>12시</th>
+
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+                <!-- 화욜 : 기계학습 -->
+                <td id="machine" class="subject" rowspan="2">
+                    기계학습<br>
+                    제1실습관308호<br>
+                    (전산원관리)<br>
+                    컴퓨터강의실
+                </td>
+
+
+                
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+                
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+                
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+            </tr>
+
+
+            <!-- 1시 -->
+            <tr>
+
+                <th>1시</th>
+
+                <!-- 월욜 1시 -->
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+            
+
+
+                <!-- 수욜 1시 -->
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+                <!-- 목욜 1시 -->
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+
+                <!-- 금욜 1시 -->
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/5787/5787016.png"
+                         alt="아이콘">
+                </td>
+
+            </tr>
+
+
+            <!-- 2시 -->
+            <tr>
+
+                <th>2시</th>
+
+                <td id="ai" class="subject" rowspan="3">
+                    인공지능개론<br>
+                    바울관301호<br>
+                    (컴퓨터실)
+                </td>
+
+                <td></td>
+
+                <td id="rl" class="subject" rowspan="3">
+                    강화학습<br>
+                    제1실습관207호<br>
+                    (컴퓨터실습실)
+                </td>
+
+                <td id="nlp" class="subject" rowspan="3">
+                    자연어처리<br>
+                    바울관312호<br>
+                    강의실
+                </td>
+
+                <td class="empty-cell">
+                    <img class="calendar-icon"
+                         src="https://cdn-icons-png.flaticon.com/128/6003/6003629.png"
+                         alt="날짜 저장 아이콘">
+                </td>
+
+            </tr>
+
+
+            <!-- 3시 -->
+            <tr>
+
+                <th>3시</th>
+
+                <td></td>
+                <td></td>
+
+            </tr>
+
+
+            <!-- 4시 -->
+            <tr>
+
+                <th>4시</th>
+
+                <td></td>
+                <td></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
