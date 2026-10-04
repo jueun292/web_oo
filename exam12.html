@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style> 
+    .T1 {
+    font-family: "Bagel Fat One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+div{border: 1px solid red; background-color: aliceblue; margin: 20px;}
+/*dispaly: block 으로하면 inline을 block으로 변경 display속성*/
+#r1 {height: 50px; width: 200px; position: absolute; left: 500px; top: 500px;}
+#r2 {display:inline-block;height:100px;width: 100px; position: relative; left:100px; }
+#r3 {display:inline-block;height:150px; width: 400px; background-image: url("https://www.google.com/images/branding/google_wordmark/v1/2x/googlelogo_color_272x92dp.png");
+    background-position: center;
+}
+</style>
+</head>
+<body>
+    <h1 class="T1">웹 폰트 사용하기</h1>
+    <!--컨테이너 역할을하는 div ,블록레벨 ,레이아웃을 잡아줌-->
+    <div id="r1"></div>
+    <div id="r2"></div>
+    <div id="r3"></div>
+</body>
+</html>
