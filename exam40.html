@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{ text-align:center;}
+    .disp{width:205px; height:40px; margin-top: 3px;}
+    .disp{font-family: Oxanium; sans-serif; font-size: 22pt; text-align: right;}
+    input[type=button] {width:50px; height: 50px; text-align: center;
+        vertical-align: middle; margin-top: 5px;}
+    #calc { width: 220px; margin-left: auto; margin-right:auto;}
+</style>
+<script src = "https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $('.num').click(function(){
+
+            //숫자를 입력하면 위에 입력창 display에 넣어주면됨
+            let n = $(this).val(); //현재 value 값을 get해옴
+            //id ="disp2"이제 여기에집어넣어야됨
+            //value
+            let cur = $('#disp2').val();
+            $('#disp2').val(cur+n);
+            
+        });
+        $('.op').click(function(){
+            let cur = $('#disp2').val();
+            let opt = $(this).val();
+            if(opt != "="){
+            $('#disp2').val(cur+opt);
+        }
+
+        else {
+            // = 입력되면 계산결과가 표시되도록
+            //현재 값을 위에 칸에 올리는것
+            $('#disp1').val(cur);
+            //eval() 식을 실행시키는 함수
+            //$('#disp').val(eval(cur));
+            //위에코드를 직접 구현해볼것
+
+            //AC 위아래칸 리셋(초기화 기능)
+
+            //클러드나 지피티 이용해서 요구사항 작성하고 요구사항에 맞게 자바스크립트 기반의 페이지를 결과를 볼것
+            //어떤 요구사항을 적었는지 최종적인 결과물을 나오게했는지 같이 정리해서
+            //최종결과물 제출(추가적인 기능)
+
+
+
+
+        }
+        })
+    });
+</script>
+<body>
+    <h1>계산기</h1>
+    <div id="calc">
+        <div>
+            <input type="text" class="disp" id="disp1" readonly>
+            <input type="text" class="disp" id ="disp2" readonly>
+
+    </div>
+    <input type="button" class="num" value="7">
+    <input type="button" class="num" value="8">
+    <input type="button" class="num" value="9">
+    <input type="button" class="op" value="+"><br>
+    <input type="button" class="num" value="4">
+    <input type="button" class="num" value="5">
+    <input type="button" class="num" value="6">
+    <input type="button" class="op" value="-"><br>
+    <input type="button" class="num" value="1">
+    <input type="button" class="num" value="2">
+    <input type="button" class="num" value="3">
+    <input type="button" class="op" value="*"><br>
+    <input type="button" class="func" value="AC">
+    <input type="button" class="num" value="0">
+    <input type="button" class="op" value="=">
+    <input type="button" class="op" value="/">
+
+</body>
+</html>
